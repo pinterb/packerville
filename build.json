@@ -1,0 +1,15 @@
+{
+    "builders": [
+        {
+            "type": "docker",
+            "image": "stackbrew/ubuntu:saucy",
+            "export_path": "ansible-provisioned.tar"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "ansible-local",
+            "playbook_file": "provision.yaml"
+        }
+    ]
+}
